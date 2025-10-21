@@ -87,6 +87,7 @@
         .submit-btn:hover {
             background-color: #d97706;
         }
+
         .submit-btn:disabled {
             background-color: #9ca3af;
             cursor: not-allowed;
@@ -132,9 +133,10 @@
         </div>
 
         <form id="surveyForm">
+            <!-- ส่วนที่ 1: ข้อมูลของผู้ตอบแบบสอบถาม -->
             <div class="form-section">
                 <h3 class="text-xl font-bold mb-6 border-b pb-2 text-gray-700">ส่วนที่ 1: ข้อมูลของผู้ตอบแบบสอบถาม</h3>
-                
+
                 <div class="mb-6">
                     <label class="form-label">ท่านอยู่ในกลุ่มใด</label>
                     <label class="form-radio-label"><input type="radio" name="respondent_group" value="employer" class="form-radio"> กลุ่มผู้ใช้บัณฑิต/นายจ้าง</label>
@@ -160,7 +162,7 @@
                     <label for="department" class="form-label">กอง/สำนัก/ส่วนงาน</label>
                     <input type="text" id="department" name="department" class="form-input">
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
                     <div><label class="form-label">ที่ตั้งเลขที่</label><input type="text" name="address_no" class="form-input"></div>
                     <div><label class="form-label">ซอย</label><input type="text" name="address_soi" class="form-input"></div>
@@ -172,7 +174,7 @@
                     <div><label class="form-label">โทร</label><input type="text" name="phone" class="form-input"></div>
                     <div><label class="form-label">โทรศัพท์เคลื่อนที่</label><input type="text" name="mobile_phone" class="form-input"></div>
                 </div>
-                 <div class="mb-6">
+                <div class="mb-6">
                     <label for="email" class="form-label">E-mail Address</label>
                     <input type="email" id="email" name="email" class="form-input">
                 </div>
@@ -188,15 +190,15 @@
                         <div class="flex items-center"><input type="radio" name="org_type" value="อื่นๆ" class="form-radio mr-2"> อื่นๆ <input type="text" name="org_type_other" class="form-input ml-2 flex-grow" placeholder="โปรดระบุ"></div>
                     </div>
                 </div>
-                
+
                 <div class="mb-6">
                     <label class="form-label">5. หน่วยงานของท่านส่วนใหญ่ใช้ความรู้ความสามารถในวิชาการด้านใดที่เกี่ยวกับภูมิศาสตร์ (ตอบได้มากกว่า 1 ข้อ และกรุณาเรียงลำดับความสำคัญ)</label>
-                       <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="การอ่านแผนที่และการแปลตีความภาพถ่ายทางอากาศ" class="form-checkbox"> การอ่านแผนที่และการแปลตีความภาพถ่ายทางอากาศ</label>
-                       <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="โฟโตแกรมเมตรี" class="form-checkbox"> โฟโตแกรมเมตรี (Photogrammetry)</label>
-                       <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="การสัมผัสจากระยะไกล" class="form-checkbox"> การสัมผัสจากระยะไกล (Remote Sensing)</label>
-                       <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="ระบบสารสนเทศทางภูมิศาสตร์" class="form-checkbox"> ระบบสารสนเทศทางภูมิศาสตร์ (Geography Information System)</label>
-                       <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="การสำรวจด้วยดาวเทียม" class="form-checkbox"> การสำรวจด้วยดาวเทียม (Global Positioning System)</label>
-                       <div class="flex items-center mt-2"><input type="checkbox" name="geo_knowledge" value="อื่นๆ" class="form-checkbox mr-2"> อื่นๆ <input type="text" name="geo_knowledge_other" class="form-input ml-2 flex-grow" placeholder="โปรดระบุ"></div>
+                    <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="การอ่านแผนที่และการแปลตีความภาพถ่ายทางอากาศ" class="form-checkbox"> การอ่านแผนที่และการแปลตีความภาพถ่ายทางอากาศ</label>
+                    <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="โฟโตแกรมเมตรี" class="form-checkbox"> โฟโตแกรมเมตรี (Photogrammetry)</label>
+                    <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="การสัมผัสจากระยะไกล" class="form-checkbox"> การสัมผัสจากระยะไกล (Remote Sensing)</label>
+                    <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="ระบบสารสนเทศทางภูมิศาสตร์" class="form-checkbox"> ระบบสารสนเทศทางภูมิศาสตร์ (Geography Information System)</label>
+                    <label class="form-checkbox-label"><input type="checkbox" name="geo_knowledge" value="การสำรวจด้วยดาวเทียม" class="form-checkbox"> การสำรวจด้วยดาวเทียม (Global Positioning System)</label>
+                    <div class="flex items-center mt-2"><input type="checkbox" name="geo_knowledge" value="อื่นๆ" class="form-checkbox mr-2"> อื่นๆ <input type="text" name="geo_knowledge_other" class="form-input ml-2 flex-grow" placeholder="โปรดระบุ"></div>
                 </div>
 
                 <div>
@@ -208,37 +210,162 @@
                 </div>
             </div>
 
+            <!-- ส่วนที่ 2: การประเมินความคาดหวัง -->
             <div class="form-section">
                 <h3 class="text-xl font-bold mb-2 border-b pb-2 text-gray-700">ส่วนที่ 2: การประเมินความคาดหวังต่อคุณลักษณะของบัณฑิต</h3>
                 <p class="text-sm text-gray-600 mb-6">โปรดประเมินระดับความคาดหวังของท่าน โดย 5=มากที่สุด, 4=มาก, 3=ปานกลาง, 2=น้อย, 1=น้อยที่สุด</p>
 
+                <!-- 2-1: ความรู้ -->
                 <h4 class="text-lg font-semibold mb-4 text-gray-800">ส่วนที่ 2-1 : คุณลักษณะด้านความรู้ (Knowledge)</h4>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
                         <thead class="table-header">
                             <tr>
                                 <th class="w-2/5">คุณลักษณะด้านความรู้ (Knowledge)</th>
-                                <th>5</th><th>4</th><th>3</th><th>2</th><th>1</th>
+                                <th>5</th>
+                                <th>4</th>
+                                <th>3</th>
+                                <th>2</th>
+                                <th>1</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white hover:bg-gray-50"><td>1) มีความรู้ด้านภูมิศาสตร์มนุษย์ เช่น ประชากร เศรษฐกิจ สังคม วัฒนธรรม</td><td class="text-center"><input type="radio" name="k1" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k1" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k1" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k1" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k1" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>2) มีความรู้ด้านภูมิศาสตร์กายภาพ เช่น ธรณี ลักษณะภูมิประเทศ บรรยากาศ และชีวภาค</td><td class="text-center"><input type="radio" name="k2" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k2" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k2" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k2" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k2" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>3) มีความรู้เกี่ยวกับโลกและภูมิศาสตร์ในเขตภูมิภาคต่างๆ</td><td class="text-center"><input type="radio" name="k3" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k3" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k3" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k3" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k3" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>4) มีความรู้ความเข้าใจปรากฎการณ์เชิงพื้นที่ และวิเคราะห์เชื่อมโยงกับปัจจัยต่างๆ</td><td class="text-center"><input type="radio" name="k4" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k4" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k4" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k4" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k4" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>5) มีความรู้ด้านภูมิสารสนเทศ เทคนิควิธีการวิเคราะห์เชิงพื้นที่</td><td class="text-center"><input type="radio" name="k5" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k5" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k5" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k5" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k5" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>6) มีความรู้ด้านการทำแผนที่</td><td class="text-center"><input type="radio" name="k6" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k6" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k6" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k6" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k6" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>7) มีความรู้ด้านทรัพยกรและสิ่งแวดล้อม</td><td class="text-center"><input type="radio" name="k7" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k7" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k7" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k7" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k7" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>8) มีความรู้ด้านการใช้ประโยชน์ดิน และการจัดการ</td><td class="text-center"><input type="radio" name="k8" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k8" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k8" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k8" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k8" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>9) มีความรู้เรื่องดิน น้ำ และการเกษตร</td><td class="text-center"><input type="radio" name="k9" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k9" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k9" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k9" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k9" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>10) มีความรู้ด้านการเปลี่ยนแปลงสภาพภูมิอากาศ และการจัดการภัยพิบัติ</td><td class="text-center"><input type="radio" name="k10" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k10" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k10" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k10" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k10" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>11) มีความรู้ด้านแผนพัฒนาฯ นโยบาย และกฎหมายที่เกี่ยวข้อง</td><td class="text-center"><input type="radio" name="k11" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k11" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k11" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k11" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k11" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>12) มีความรู้ด้านฐานข้อมูลและวิทยาศาสตร์ข้อมูล</td><td class="text-center"><input type="radio" name="k12" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k12" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k12" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k12" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k12" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>13) มีความรู้ด้านภาษาคอมพิวเตอร์ การเขียนโปรแกรม และ AI</td><td class="text-center"><input type="radio" name="k13" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k13" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k13" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k13" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k13" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>14) มีความรู้ด้านสถิตและคณิตศาสตร์</td><td class="text-center"><input type="radio" name="k14" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k14" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k14" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k14" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k14" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>15) มีความรู้หลักการทำงานวิจัย</td><td class="text-center"><input type="radio" name="k15" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k15" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k15" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k15" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k15" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>16) ความรู้ด้านการสำรวจ/เก็บข้อมูลภาคสนาม (Site Survey /Field Data Collection)</td><td class="text-center"><input type="radio" name="k16" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k16" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k16" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k16" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k16" value="1" class="form-radio"></td></tr>
-                             <tr class="bg-white hover:bg-gray-50"><td>17) อื่นๆ (โปรดระบุ) <input type="text" name="k17_other" class="form-input mt-1"></td><td class="text-center"><input type="radio" name="k17" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="k17" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="k17" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="k17" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="k17" value="1" class="form-radio"></td></tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>1) มีความรู้ด้านภูมิศาสตร์มนุษย์ เช่น ประชากร เศรษฐกิจ สังคม วัฒนธรรม</td>
+                                <td class="text-center"><input type="radio" name="k1" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k1" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k1" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k1" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k1" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>2) มีความรู้ด้านภูมิศาสตร์กายภาพ เช่น ธรณี ลักษณะภูมิประเทศ บรรยากาศ และชีวภาค</td>
+                                <td class="text-center"><input type="radio" name="k2" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k2" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k2" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k2" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k2" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>3) มีความรู้เกี่ยวกับโลกและภูมิศาสตร์ในเขตภูมิภาคต่างๆ</td>
+                                <td class="text-center"><input type="radio" name="k3" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k3" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k3" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k3" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k3" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>4) มีความรู้ความเข้าใจปรากฎการณ์เชิงพื้นที่ และวิเคราะห์เชื่อมโยงกับปัจจัยต่างๆ</td>
+                                <td class="text-center"><input type="radio" name="k4" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k4" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k4" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k4" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k4" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>5) มีความรู้ด้านภูมิสารสนเทศ เทคนิควิธีการวิเคราะห์เชิงพื้นที่</td>
+                                <td class="text-center"><input type="radio" name="k5" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k5" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k5" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k5" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k5" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>6) มีความรู้ด้านการทำแผนที่</td>
+                                <td class="text-center"><input type="radio" name="k6" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k6" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k6" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k6" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k6" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>7) มีความรู้ด้านทรัพยกรและสิ่งแวดล้อม</td>
+                                <td class="text-center"><input type="radio" name="k7" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k7" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k7" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k7" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k7" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>8) มีความรู้ด้านการใช้ประโยชน์ดิน และการจัดการ</td>
+                                <td class="text-center"><input type="radio" name="k8" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k8" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k8" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k8" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k8" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>9) มีความรู้เรื่องดิน น้ำ และการเกษตร</td>
+                                <td class="text-center"><input type="radio" name="k9" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k9" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k9" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k9" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k9" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>10) มีความรู้ด้านการเปลี่ยนแปลงสภาพภูมิอากาศ และการจัดการภัยพิบัติ</td>
+                                <td class="text-center"><input type="radio" name="k10" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k10" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k10" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k10" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k10" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>11) มีความรู้ด้านแผนพัฒนาฯ นโยบาย และกฎหมายที่เกี่ยวข้อง</td>
+                                <td class="text-center"><input type="radio" name="k11" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k11" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k11" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k11" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k11" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>12) มีความรู้ด้านฐานข้อมูลและวิทยาศาสตร์ข้อมูล</td>
+                                <td class="text-center"><input type="radio" name="k12" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k12" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k12" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k12" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k12" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>13) มีความรู้ด้านภาษาคอมพิวเตอร์ การเขียนโปรแกรม และ AI</td>
+                                <td class="text-center"><input type="radio" name="k13" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k13" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k13" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k13" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k13" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>14) มีความรู้ด้านสถิตและคณิตศาสตร์</td>
+                                <td class="text-center"><input type="radio" name="k14" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k14" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k14" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k14" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k14" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>15) มีความรู้หลักการทำงานวิจัย</td>
+                                <td class="text-center"><input type="radio" name="k15" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k15" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k15" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k15" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k15" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>16) ความรู้ด้านการสำรวจ/เก็บข้อมูลภาคสนาม (Site Survey /Field Data Collection)</td>
+                                <td class="text-center"><input type="radio" name="k16" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k16" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k16" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k16" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k16" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>17) อื่นๆ (โปรดระบุ) <input type="text" name="k17_other" class="form-input mt-1"></td>
+                                <td class="text-center"><input type="radio" name="k17" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k17" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k17" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k17" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="k17" value="1" class="form-radio"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -246,87 +373,340 @@
                     <label for="knowledge_suggestions" class="form-label">2.2 ข้อเสนอแนะเพิ่มเติมเกี่ยวกับคุณลักษณะด้านความรู้ (Knowledge)</label>
                     <textarea id="knowledge_suggestions" name="knowledge_suggestions" rows="4" class="form-textarea"></textarea>
                 </div>
-                
-                 <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-3 : คุณลักษณะด้านทักษะเฉพาะ (Specific Skills)</h4>
+
+                <!-- 2-3: ทักษะเฉพาะ -->
+                <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-3 : คุณลักษณะด้านทักษะเฉพาะ (Specific Skills)</h4>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                         <thead class="table-header">
+                        <thead class="table-header">
                             <tr>
                                 <th class="w-2/5">คุณลักษณะด้านทักษะเฉพาะ (Specific Skills)</th>
-                                <th>5</th><th>4</th><th>3</th><th>2</th><th>1</th>
+                                <th>5</th>
+                                <th>4</th>
+                                <th>3</th>
+                                <th>2</th>
+                                <th>1</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white hover:bg-gray-50"><td>1) ทักษะการอ่านแผนที่และการทำแผนที่</td><td class="text-center"><input type="radio" name="ss1" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss1" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss1" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss1" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss1" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>2) ทักษะการใช้เครื่องมือสำรวจภาคสนาม เช่น เข็มทิศ GPS GNSS</td><td class="text-center"><input type="radio" name="ss2" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss2" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss2" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss2" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss2" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>3) ทักษะการบินถ่ายภาพด้วยโดรน การจัดการข้อมูลและนำข้อมูลมาวิเคราะห์</td><td class="text-center"><input type="radio" name="ss3" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss3" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss3" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss3" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss3" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>4) ทักษะการแปลตีความภาพด้วยสายตา</td><td class="text-center"><input type="radio" name="ss4" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss4" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss4" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss4" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss4" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>5) ทักษะการแปลตีความจากภาพถ่ายดาวเทียมด้วยโปรแกรมคอมพิวเตอร์</td><td class="text-center"><input type="radio" name="ss5" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss5" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss5" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss5" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss5" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>6) ทักษะการวิเคราะห์ข้อมูลเชิงพื้นที่โดยใช้เทคโนโลยีภูมิสารสนเทศ</td><td class="text-center"><input type="radio" name="ss6" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss6" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss6" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss6" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss6" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>7) ทักษะการเก็บข้อมูลเชิงคุณภาพและเชิงปริมาณ นำข้อมูลมาวิเคราะห์และสรุปผล</td><td class="text-center"><input type="radio" name="ss7" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss7" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss7" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss7" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss7" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>8) ทักษะการสืบค้นข้อมูลภูมิสารสนเทศและการเลือกใช้ได้อย่างเหมาะสม</td><td class="text-center"><input type="radio" name="ss8" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss8" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss8" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss8" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss8" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>9) ทักษะการจัดการฐานข้อมูลและวิเคราะห์วิทยาศาสตร์ข้อมูล</td><td class="text-center"><input type="radio" name="ss9" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss9" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss9" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss9" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss9" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>10) ทักษะการใช้ Machine Learning, AI</td><td class="text-center"><input type="radio" name="ss10" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss10" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss10" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss10" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss10" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>11) ทักษะการเขียนโปรแกรมพื้นฐาน อาทิ SQL, Python เพื่อการวิเคราะห์ จัดการ และแสดงผลข้อมูล</td><td class="text-center"><input type="radio" name="ss11" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss11" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss11" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss11" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss11" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>12) ทักษะการใช้เทคโนโลยีใหม่ ๆ อาทิ Cloud-based GIS, Google Engine, Lidar, และ Laser Scan</td><td class="text-center"><input type="radio" name="ss12" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss12" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss12" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss12" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss12" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>13) ทักษะจากการฝึกประสบการณ์ การฝึกงาน</td><td class="text-center"><input type="radio" name="ss13" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss13" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss13" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss13" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss13" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>14) ทักษะการศึกษาโครงการที่อิงจากปัญหาจริง (Real Use Cases)</td><td class="text-center"><input type="radio" name="ss14" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss14" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss14" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss14" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss14" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>15) ทักษะด้าน Management Business</td><td class="text-center"><input type="radio" name="ss15" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss15" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss15" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss15" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss15" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>16) ทักษะด้าน Development Strategic Planning</td><td class="text-center"><input type="radio" name="ss16" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss16" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss16" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss16" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss16" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>17) อื่นๆ (โปรดระบุ) <input type="text" name="ss17_other" class="form-input mt-1"></td><td class="text-center"><input type="radio" name="ss17" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="ss17" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="ss17" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="ss17" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="ss17" value="1" class="form-radio"></td></tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>1) ทักษะการอ่านแผนที่และการทำแผนที่</td>
+                                <td class="text-center"><input type="radio" name="ss1" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss1" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss1" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss1" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss1" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>2) ทักษะการใช้เครื่องมือสำรวจภาคสนาม เช่น เข็มทิศ GPS GNSS</td>
+                                <td class="text-center"><input type="radio" name="ss2" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss2" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss2" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss2" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss2" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>3) ทักษะการบินถ่ายภาพด้วยโดรน การจัดการข้อมูลและนำข้อมูลมาวิเคราะห์</td>
+                                <td class="text-center"><input type="radio" name="ss3" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss3" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss3" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss3" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss3" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>4) ทักษะการแปลตีความภาพด้วยสายตา</td>
+                                <td class="text-center"><input type="radio" name="ss4" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss4" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss4" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss4" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss4" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>5) ทักษะการแปลตีความจากภาพถ่ายดาวเทียมด้วยโปรแกรมคอมพิวเตอร์</td>
+                                <td class="text-center"><input type="radio" name="ss5" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss5" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss5" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss5" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss5" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>6) ทักษะการวิเคราะห์ข้อมูลเชิงพื้นที่โดยใช้เทคโนโลยีภูมิสารสนเทศ</td>
+                                <td class="text-center"><input type="radio" name="ss6" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss6" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss6" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss6" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss6" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>7) ทักษะการเก็บข้อมูลเชิงคุณภาพและเชิงปริมาณ นำข้อมูลมาวิเคราะห์และสรุปผล</td>
+                                <td class="text-center"><input type="radio" name="ss7" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss7" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss7" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss7" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss7" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>8) ทักษะการสืบค้นข้อมูลภูมิสารสนเทศและการเลือกใช้ได้อย่างเหมาะสม</td>
+                                <td class="text-center"><input type="radio" name="ss8" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss8" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss8" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss8" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss8" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>9) ทักษะการจัดการฐานข้อมูลและวิเคราะห์วิทยาศาสตร์ข้อมูล</td>
+                                <td class="text-center"><input type="radio" name="ss9" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss9" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss9" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss9" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss9" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>10) ทักษะการใช้ Machine Learning, AI</td>
+                                <td class="text-center"><input type="radio" name="ss10" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss10" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss10" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss10" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss10" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>11) ทักษะการเขียนโปรแกรมพื้นฐาน อาทิ SQL, Python เพื่อการวิเคราะห์ จัดการ และแสดงผลข้อมูล</td>
+                                <td class="text-center"><input type="radio" name="ss11" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss11" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss11" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss11" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss11" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>12) ทักษะการใช้เทคโนโลยีใหม่ ๆ อาทิ Cloud-based GIS, Google Engine, Lidar, และ Laser Scan</td>
+                                <td class="text-center"><input type="radio" name="ss12" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss12" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss12" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss12" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss12" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>13) ทักษะจากการฝึกประสบการณ์ การฝึกงาน</td>
+                                <td class="text-center"><input type="radio" name="ss13" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss13" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss13" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss13" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss13" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>14) ทักษะการศึกษาโครงการที่อิงจากปัญหาจริง (Real Use Cases)</td>
+                                <td class="text-center"><input type="radio" name="ss14" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss14" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss14" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss14" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss14" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>15) ทักษะด้าน Management Business</td>
+                                <td class="text-center"><input type="radio" name="ss15" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss15" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss15" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss15" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss15" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>16) ทักษะด้าน Development Strategic Planning</td>
+                                <td class="text-center"><input type="radio" name="ss16" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss16" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss16" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss16" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss16" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>17) อื่นๆ (โปรดระบุ) <input type="text" name="ss17_other" class="form-input mt-1"></td>
+                                <td class="text-center"><input type="radio" name="ss17" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss17" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss17" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss17" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="ss17" value="1" class="form-radio"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                 <div class="mt-6">
+                <div class="mt-6">
                     <label for="specific_skills_suggestions" class="form-label">3.2 ข้อเสนอแนะเพิ่มเติมเกี่ยวกับคุณลักษณะด้านทักษะเฉพาะ (Specific Skills)</label>
                     <textarea id="specific_skills_suggestions" name="specific_skills_suggestions" rows="4" class="form-textarea"></textarea>
                 </div>
-                
-                 <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-4 : คุณลักษณะด้านทักษะทั่วไป (Generic Skills)</h4>
+
+                <!-- 2-4: ทักษะทั่วไป -->
+                <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-4 : คุณลักษณะด้านทักษะทั่วไป (Generic Skills)</h4>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                         <thead class="table-header">
+                        <thead class="table-header">
                             <tr>
                                 <th class="w-2/5">คุณลักษณะด้านทักษะทั่วไป (Generic Skills)</th>
-                                <th>5</th><th>4</th><th>3</th><th>2</th><th>1</th>
+                                <th>5</th>
+                                <th>4</th>
+                                <th>3</th>
+                                <th>2</th>
+                                <th>1</th>
                             </tr>
                         </thead>
                         <tbody>
-                           <tr class="bg-white hover:bg-gray-50"><td>1) ทักษะการใช้ภาษาอังกฤษ</td><td class="text-center"><input type="radio" name="gs1" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs1" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs1" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs1" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs1" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>2) ทักษะการสืบค้นข้อมูลและเลือกใช้ข้อมูลอย่างมีวิจารณญาณ</td><td class="text-center"><input type="radio" name="gs2" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs2" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs2" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs2" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs2" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>3) ทักษะในการสื่อสาร และนำเสนอ (Communication & Presentation)</td><td class="text-center"><input type="radio" name="gs3" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs3" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs3" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs3" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs3" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>4) ทักษะในการเล่าเรื่องด้วยข้อมูล (Data Storytelling) การสื่อสารข้อมูลที่ซับซ้อนให้เข้าใจง่าย และน่าสนใจ</td><td class="text-center"><input type="radio" name="gs4" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs4" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs4" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs4" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs4" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>5) ทักษะในการคิดวิเคราะห์และแก้ไขปัญหา (Critical Thinking & Problem Solving)</td><td class="text-center"><input type="radio" name="gs5" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs5" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs5" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs5" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs5" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>6) ทักษะในการทำงานร่วมกับผู้อื่น (Interdisciplinary Collaboration)</td><td class="text-center"><input type="radio" name="gs6" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs6" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs6" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs6" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs6" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>7) ทักษะการคิดเชิงกลยุทธ์ (Strategic Thinking) ความสามารถในการมองภาพรวม และวางแผนเพื่อตอบสนองเป้าหมาย</td><td class="text-center"><input type="radio" name="gs7" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs7" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs7" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs7" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs7" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>8) ความสามารถในการปรับตัวและทำงานภายใต้ความกดดัน</td><td class="text-center"><input type="radio" name="gs8" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs8" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs8" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs8" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs8" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>9) ทักษะการเรียนรู้ตลอดชีวิต (Life Long Learning)</td><td class="text-center"><input type="radio" name="gs9" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs9" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs9" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs9" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs9" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>10) ทักษะในการตรวจสอบความถูกต้องของข้อมูลและผลงาน</td><td class="text-center"><input type="radio" name="gs10" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs10" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs10" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs10" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs10" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>11) อื่นๆ (โปรดระบุ) <input type="text" name="gs11_other" class="form-input mt-1"></td><td class="text-center"><input type="radio" name="gs11" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="gs11" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="gs11" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="gs11" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="gs11" value="1" class="form-radio"></td></tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>1) ทักษะการใช้ภาษาอังกฤษ</td>
+                                <td class="text-center"><input type="radio" name="gs1" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs1" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs1" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs1" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs1" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>2) ทักษะการสืบค้นข้อมูลและเลือกใช้ข้อมูลอย่างมีวิจารณญาณ</td>
+                                <td class="text-center"><input type="radio" name="gs2" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs2" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs2" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs2" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs2" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>3) ทักษะในการสื่อสาร และนำเสนอ (Communication &amp; Presentation)</td>
+                                <td class="text-center"><input type="radio" name="gs3" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs3" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs3" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs3" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs3" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>4) ทักษะในการเล่าเรื่องด้วยข้อมูล (Data Storytelling) การสื่อสารข้อมูลที่ซับซ้อนให้เข้าใจง่าย และน่าสนใจ</td>
+                                <td class="text-center"><input type="radio" name="gs4" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs4" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs4" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs4" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs4" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>5) ทักษะในการคิดวิเคราะห์และแก้ไขปัญหา (Critical Thinking &amp; Problem Solving)</td>
+                                <td class="text-center"><input type="radio" name="gs5" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs5" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs5" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs5" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs5" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>6) ทักษะในการทำงานร่วมกับผู้อื่น (Interdisciplinary Collaboration)</td>
+                                <td class="text-center"><input type="radio" name="gs6" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs6" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs6" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs6" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs6" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>7) ทักษะการคิดเชิงกลยุทธ์ (Strategic Thinking) ความสามารถในการมองภาพรวม และวางแผนเพื่อตอบสนองเป้าหมาย</td>
+                                <td class="text-center"><input type="radio" name="gs7" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs7" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs7" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs7" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs7" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>8) ความสามารถในการปรับตัวและทำงานภายใต้ความกดดัน</td>
+                                <td class="text-center"><input type="radio" name="gs8" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs8" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs8" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs8" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs8" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>9) ทักษะการเรียนรู้ตลอดชีวิต (Life Long Learning)</td>
+                                <td class="text-center"><input type="radio" name="gs9" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs9" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs9" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs9" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs9" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>10) ทักษะในการตรวจสอบความถูกต้องของข้อมูลและผลงาน</td>
+                                <td class="text-center"><input type="radio" name="gs10" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs10" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs10" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs10" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs10" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>11) อื่นๆ (โปรดระบุ) <input type="text" name="gs11_other" class="form-input mt-1"></td>
+                                <td class="text-center"><input type="radio" name="gs11" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs11" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs11" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs11" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="gs11" value="1" class="form-radio"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                 <div class="mt-6">
+                <div class="mt-6">
                     <label for="generic_skills_suggestions" class="form-label">4.2 ข้อเสนอแนะเพิ่มเติมเกี่ยวกับคุณลักษณะด้านทักษะทั่วไป (Generic Skills)</label>
                     <textarea id="generic_skills_suggestions" name="generic_skills_suggestions" rows="4" class="form-textarea"></textarea>
                 </div>
-                
-                 <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-5 : คุณลักษณะด้านจริยธรรม (Ethics)</h4>
+
+                <!-- 2-5: จริยธรรม -->
+                <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-5 : คุณลักษณะด้านจริยธรรม (Ethics)</h4>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                         <thead class="table-header">
+                        <thead class="table-header">
                             <tr>
                                 <th class="w-2/5">คุณลักษณะด้านจริยธรรม (Ethics)</th>
-                                <th>5</th><th>4</th><th>3</th><th>2</th><th>1</th>
+                                <th>5</th>
+                                <th>4</th>
+                                <th>3</th>
+                                <th>2</th>
+                                <th>1</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white hover:bg-gray-50"><td>1) ความซื่อสัตย์</td><td class="text-center"><input type="radio" name="e1" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="e1" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="e1" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="e1" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="e1" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>2) ความมีจิตสาธารณะ</td><td class="text-center"><input type="radio" name="e2" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="e2" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="e2" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="e2" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="e2" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>3) มีจริยธรรมในการทำงานวิชาการ</td><td class="text-center"><input type="radio" name="e3" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="e3" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="e3" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="e3" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="e3" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>4) มีความรับผิดชอบต่อตนเองและสังคม</td><td class="text-center"><input type="radio" name="e4" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="e4" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="e4" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="e4" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="e4" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>5) มีความขยันอดทน ไม่ย่อท้อต่ออุปสรรค</td><td class="text-center"><input type="radio" name="e5" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="e5" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="e5" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="e5" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="e5" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>6) อื่นๆ (โปรดระบุ) <input type="text" name="e6_other" class="form-input mt-1"></td><td class="text-center"><input type="radio" name="e6" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="e6" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="e6" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="e6" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="e6" value="1" class="form-radio"></td></tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>1) ความซื่อสัตย์</td>
+                                <td class="text-center"><input type="radio" name="e1" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e1" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e1" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e1" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e1" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>2) ความมีจิตสาธารณะ</td>
+                                <td class="text-center"><input type="radio" name="e2" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e2" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e2" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e2" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e2" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>3) มีจริยธรรมในการทำงานวิชาการ</td>
+                                <td class="text-center"><input type="radio" name="e3" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e3" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e3" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e3" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e3" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>4) มีความรับผิดชอบต่อตนเองและสังคม</td>
+                                <td class="text-center"><input type="radio" name="e4" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e4" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e4" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e4" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e4" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>5) มีความขยันอดทน ไม่ย่อท้อต่ออุปสรรค</td>
+                                <td class="text-center"><input type="radio" name="e5" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e5" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e5" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e5" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e5" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>6) อื่นๆ (โปรดระบุ) <input type="text" name="e6_other" class="form-input mt-1"></td>
+                                <td class="text-center"><input type="radio" name="e6" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e6" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e6" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e6" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="e6" value="1" class="form-radio"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -335,43 +715,99 @@
                     <textarea id="ethics_suggestions" name="ethics_suggestions" rows="4" class="form-textarea"></textarea>
                 </div>
 
+                <!-- 2-6: คุณลักษณะเฉพาะบุคคล -->
                 <h4 class="text-lg font-semibold mb-4 mt-8 text-gray-800">ส่วนที่ 2-6 : คุณลักษณะเฉพาะบุคคล (Characters)</h4>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                         <thead class="table-header">
+                        <thead class="table-header">
                             <tr>
                                 <th class="w-2/5">คุณลักษณะเฉพาะบุคคล (Characters)</th>
-                                <th>5</th><th>4</th><th>3</th><th>2</th><th>1</th>
+                                <th>5</th>
+                                <th>4</th>
+                                <th>3</th>
+                                <th>2</th>
+                                <th>1</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white hover:bg-gray-50"><td>1) มีอิสระทางความคิด และกล้าแสดงออกอย่างมีเหตุผล</td><td class="text-center"><input type="radio" name="c1" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c1" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c1" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c1" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c1" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>2) การคิดเชิงก้าวหน้า: วิเคราะห์และสร้างสรรค์</td><td class="text-center"><input type="radio" name="c2" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c2" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c2" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c2" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c2" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>3) การเสียสละตนเองเพื่อประโยชน์ของส่วนรวม</td><td class="text-center"><input type="radio" name="c3" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c3" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c3" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c3" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c3" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>4) ทักษะด้านมนุษยสัมพันธ์</td><td class="text-center"><input type="radio" name="c4" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c4" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c4" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c4" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c4" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>5) ความใฝ่รู้ การพัฒนาตนเอง</td><td class="text-center"><input type="radio" name="c5" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c5" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c5" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c5" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c5" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-gray-50 hover:bg-gray-100"><td>6) ความสามารถด้านการรู้เท่าทันเทคโนโลยี ดิจิทัลและปัญญาประดิษฐ์</td><td class="text-center"><input type="radio" name="c6" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c6" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c6" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c6" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c6" value="1" class="form-radio"></td></tr>
-                            <tr class="bg-white hover:bg-gray-50"><td>7) อื่นๆ (โปรดระบุ) <input type="text" name="c7_other" class="form-input mt-1"></td><td class="text-center"><input type="radio" name="c7" value="5" class="form-radio"></td><td class="text-center"><input type="radio" name="c7" value="4" class="form-radio"></td><td class="text-center"><input type="radio" name="c7" value="3" class="form-radio"></td><td class="text-center"><input type="radio" name="c7" value="2" class="form-radio"></td><td class="text-center"><input type="radio" name="c7" value="1" class="form-radio"></td></tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>1) มีอิสระทางความคิด และกล้าแสดงออกอย่างมีเหตุผล</td>
+                                <td class="text-center"><input type="radio" name="c1" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c1" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c1" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c1" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c1" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>2) การคิดเชิงก้าวหน้า: วิเคราะห์และสร้างสรรค์</td>
+                                <td class="text-center"><input type="radio" name="c2" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c2" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c2" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c2" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c2" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>3) การเสียสละตนเองเพื่อประโยชน์ของส่วนรวม</td>
+                                <td class="text-center"><input type="radio" name="c3" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c3" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c3" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c3" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c3" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>4) ทักษะด้านมนุษยสัมพันธ์</td>
+                                <td class="text-center"><input type="radio" name="c4" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c4" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c4" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c4" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c4" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>5) ความใฝ่รู้ การพัฒนาตนเอง</td>
+                                <td class="text-center"><input type="radio" name="c5" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c5" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c5" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c5" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c5" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td>6) ความสามารถด้านการรู้เท่าทันเทคโนโลยี ดิจิทัลและปัญญาประดิษฐ์</td>
+                                <td class="text-center"><input type="radio" name="c6" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c6" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c6" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c6" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c6" value="1" class="form-radio"></td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td>7) อื่นๆ (โปรดระบุ) <input type="text" name="c7_other" class="form-input mt-1"></td>
+                                <td class="text-center"><input type="radio" name="c7" value="5" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c7" value="4" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c7" value="3" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c7" value="2" class="form-radio"></td>
+                                <td class="text-center"><input type="radio" name="c7" value="1" class="form-radio"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                 <div class="mt-6">
+                <div class="mt-6">
                     <label for="characters_suggestions" class="form-label">6.2 ข้อเสนอแนะเพิ่มเติมเกี่ยวกับลักษณะเฉพาะบุคคล (Characters)</label>
                     <textarea id="characters_suggestions" name="characters_suggestions" rows="4" class="form-textarea"></textarea>
                 </div>
-                
-                 <div class="mt-8">
+
+                <!-- 2-7: อัตลักษณ์ -->
+                <div class="mt-8">
                     <label for="identity" class="form-label text-lg font-semibold text-gray-800">ส่วนที่ 2-7: ในมุมมองของท่าน คุณลักษณะของบัณฑิตหลักสูตรภูมิศาสตร์และภูมิสารสนเทศที่จบจากสาขาภูมิศาสตร์ คณะศิลปศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ควรมีลักษณะพิเศษ หรืออัตลักษณ์ที่แตกต่างจากบัณฑิตที่จบจากหลักสูตรเดียวกันจากสถาบันอื่นอย่างไร</label>
                     <textarea id="identity" name="identity" rows="5" class="form-textarea"></textarea>
                 </div>
             </div>
 
+            <!-- ส่วนที่ 3: ข้อเสนอแนะ -->
             <div class="form-section">
                 <h3 class="text-xl font-bold mb-4 border-b pb-2 text-gray-700">ส่วนที่ 3: ข้อเสนอแนะเกี่ยวกับแนวทางการพัฒนาหลักสูตร</h3>
                 <label for="curriculum_suggestions" class="form-label">ท่านมีข้อเสนอแนะเพิ่มเติมเกี่ยวกับแนวทางการพัฒนาหลักสูตรวิทยาศาสตร์บัณฑิต สาขาภูมิศาสตร์และภูมิสารสนเทศ มหาวิทยาลัยธรรมศาสตร์ ฉบับปี พ.ศ. 2570 หรือไม่ อย่างไร</label>
                 <textarea id="curriculum_suggestions" name="curriculum_suggestions" rows="8" class="form-textarea"></textarea>
             </div>
-            
+
             <div class="text-center mt-8">
                 <button type="submit" class="submit-btn">ส่งแบบสอบถาม</button>
             </div>
@@ -398,7 +834,7 @@
 
             const formData = new FormData(form);
             
-            // จัดการข้อมูล Checkbox ที่อาจมีหลายค่า
+            // Handle multiple checkbox values for 'geo_knowledge'
             const geoKnowledge = [];
             document.querySelectorAll('input[name="geo_knowledge"]:checked').forEach((checkbox) => {
                 geoKnowledge.push(checkbox.value);
